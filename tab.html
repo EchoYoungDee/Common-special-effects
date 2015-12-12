@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TAB标签简单切换</title>
+	<script language="javascript" type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<style>
+		div{margin:0;padding:0;width:184px;height:200px;border:1px solid #ccc;display:none;}
+		.tab{margin:0;padding:0;list-style:none;width:200px;overflow:hidden;}
+		.tab li{float:left;width:60px;height:30px;background:#ccc;color:#fff;border:1px solid red; text-align:center;line-height:30px;cursor:pointer; }
+		.on{display:block;}
+		.tab li.cur{background:blue;}
+	</style>
+</head>
+<body>
+	<ul class="tab">
+       <li class="cur">最新</li>
+       <li>热门</li>
+       <li>新闻</li>
+	 </ul>
+	 <div class="box on">11</div>
+	 <div class="box" >22</div>
+	 <div class="box">33</div>
+</body>
+<script>
+	  $(document).ready(function(){
+        $(".tab li").click(function(){
+        $(".tab li").eq($(this).index()).addClass("cur").siblings().removeClass('cur');
+$(".box").hide().eq($(this).index()).show();
+       //另一种方法: $("box").eq($(".tab li").index(this)).addClass("on").siblings().removeClass('on'); 
+
+        });
+    });
+</script>
+</html>
