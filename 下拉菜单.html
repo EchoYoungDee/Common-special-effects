@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>下拉菜单效果</title>
+	<style>
+	body{margin: 0; padding: 0; }
+	ul{list-style: none; margin: 0px; padding: 0px;}
+	/* 改变 position:relative; 的定位位置即可决定出现下拉的位置 比如将 .topbox 下的 position 加入到 .top下，就会对应在父级栏目下显示下拉*/
+	.topbox{height: 50px; width: 1200px; line-height: 30px; margin:0 auto; position: relative;}
+	.top{float: left; width: 200px; border:1px solid #000; background: #ccc; margin-left: 1px; text-align: center;}
+	.top ul{display: none; position: absolute; left: 0; width: 810px; border: 1px solid #ccc; text-align: left;}
+	.on{display: block;}
+	</style>
+</head>
+<body>
+	<ul class="topbox">
+		<li class="top">水果
+			<ul>
+				<li>苹果</li>
+				<li>橘子</li>
+				<li>梨子</li>
+				<li>葡萄</li>
+				<li>西瓜</li>
+				<li>草莓</li>
+			</ul>
+		</li>
+		<li class="top">蔬菜
+			<ul>
+				<li>青菜</li>
+				<li>生菜</li>
+				<li>芹菜</li>
+				<li>白菜</li>
+				<li>包菜</li>
+				<li>空心菜</li>
+			</ul>
+		</li>
+		<li class="top">肉类
+			<ul>
+				<li>猪肉</li>
+				<li>牛肉</li>
+				<li>羊肉</li>
+				<li>鸡肉</li>
+				<li>鸭肉</li>
+				<li>鹅肉</li>
+			</ul>
+		</li>
+		<li class="top">饮料
+			<ul>
+				<li>果汁</li>
+				<li>可乐</li>
+				<li>雪碧</li>
+				<li>红酒</li>
+				<li>白酒</li>
+				<li>清酒</li>
+			</ul>
+		</li>
+	</ul>
+	<div>there</div>
+</body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$(".top").hover(
+//鼠标移上去的方法
+function(){
+$(".top ul").eq($(this).index()).show(500); //.eq($(this).index()) 这句起到了遍历的作用
+},
+//鼠标移开的方法
+function(){
+$(".top ul").hide();
+})
+})
+</script>
+<!-- 
+$("#id").hover(
+//鼠标移上去的方法
+  function () {
+    $("#菜单").show(500);
+  },
+//鼠标移开的方法
+ function () {
+    $("#菜单").hide();
+ }
+); 
+-->
+</html>
