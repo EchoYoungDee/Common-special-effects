@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹出层</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+</head>
+<style media="screen">
+    .text{width: 100px; height: 50px; border: 1px solid #ccc; float: left;}
+</style>
+<body>
+    <input type='button'  id="text0" value='添加'/>
+    <input type='button'  id="text1" value='添加1'/>
+    <input type='button'  id="text2" value='添加2'/>
+    <script type="text/javascript">
+
+    $("input[type='button']").each(function(i,e){
+        $(this).click(function(){
+			var val = $(this).val();
+            var new_obj = $("<div class='text text"+i+"'"+"> "+i+" </div>"); //此处需要为生成的 DOM 元素生成一个统一的 class 和一个与 Button id对应的Class 以作对应
+            $("body").prepend(new_obj);  //用 prepend() 方法在元素开头处插入新建的 DOM 元素
+				$('.text').each(function(i,e){  //先遍历生成的 DOM 元素的共同 class
+						$(this).click(function(){
+							$(this).remove(); //当生成的 DOM 被点击时直接移除
+								$("input[type='button']").each(function(i,e){ //遍历下 button 按钮
+								if($('.text').hasClass($(this).attr('id'))){ //判断是否存在 class 为当前 id 同名的 DOM元素
+									//$(this).attr('disabled','true');  //存在即禁用 由于不是靠点击生成DOM来禁用按钮 可不写这句
+								}else{
+									$(this).removeAttr('disabled');  //不存在即移除禁用
+								}
+							});
+						});
+					});
+            //将方法在当前按钮点击时就执行一遍
+			$("input[type='button']").each(function(i,e){
+				if($('.text').hasClass($(this).attr('id'))){
+					$(this).attr('disabled','true');
+				}else{
+					//$(this).removeAttr('disabled');  //存在即禁用 由于不是靠点击按钮本身来解禁按钮 可不写这句
+				}
+			});
+	    });
+    });
+    </script>
+</body>
+</html>
