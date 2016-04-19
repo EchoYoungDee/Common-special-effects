@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scroll test</title>
+    <style>
+            .box{width: 100%; height: 100px; background: red;}
+            .boxfi{position: fixed; top:0;}
+            *{margin: 0; padding: 0;}
+            body{height: 1800px;
+            text-align: center;
+    </style>
+    </style>
+</head>
+<body>
+    头部导航超出悬停效果 F12 查看分析
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="box">
+        <div class="box1"></div>
+    </div>
+</body>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    $(function(){
+        $(window).scroll(function(){
+            var gowhere = $(document).scrollTop();
+            console.log(gowhere);  //哟，英垂丝汀！相对于顶部的距离Get~(･ω´･ )
+            var m = $(".box").offset().top;
+           console.log(m);
+            if(gowhere>92){
+                $(".box").addClass("boxfi");
+                console.log("到了");                
+            }else{
+                $(".box").removeClass("boxfi");
+                console.log("移除");
+            }
+        });
+    });
+</script>
+</html>
