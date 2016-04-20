@@ -22,3 +22,13 @@
 
 
 ####↑以上效果的 [点击预览页面](http://htmlpreview.github.io)(将效果页面的链接粘贴到下面页面的输入框中)
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript">  
+    $(document).ready(function() {  
+        //为超链接加上target='_blank'属性  
+        $('a[href^="http"]').each(function() {  
+            $(this).attr('target', '_blank');  
+        });  
+    });  
+</script>  
