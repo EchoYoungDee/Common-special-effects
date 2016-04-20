@@ -1,6 +1,6 @@
 ### tab
 >网页常用的tab实现方法,几行简单易懂的代码即可实现tab切换，并且多tab之间不存在冲突
-使用jQuery完成的tab，代码量小，易重用与维护
+使用jQuery完成的tab，代码量小，易重用与维护[点击查看](http://htmlpreview.github.io/?https://github.com/EchoYoungDee/Some-JQ-JS-Code/blob/master/tab.html)
 
 ### JQ轮播
 >简易的轮播实现方法,重在理解轮播原理
