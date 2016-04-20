@@ -1,3 +1,4 @@
+<html>
 ### tab
 >网页常用的tab实现方法,几行简单易懂的代码即可实现tab切换，并且多tab之间不存在冲突
 使用jQuery完成的tab，代码量小，易重用与维护
@@ -23,6 +24,7 @@
 
 ####↑以上效果的 [点击预览页面](http://htmlpreview.github.io)(将效果页面的链接粘贴到下面页面的输入框中)
 
+
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
 <script type="text/javascript">  
     $(document).ready(function() {  
@@ -31,4 +33,5 @@
             $(this).attr('target', '_blank');  
         });  
     });  
-</script>  
+</script>
+</html>
