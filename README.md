@@ -22,4 +22,4 @@
 
 
 ####↑以上效果的 查看方式(将效果页面的链接粘贴到下面页面的输入框中)↓
-><a href="http://htmlpreview.github.io/" target="_blank" />
+>http://htmlpreview.github.io
