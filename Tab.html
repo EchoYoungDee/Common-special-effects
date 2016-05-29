@@ -24,13 +24,12 @@
 	 <div class="box">33</div>
 </body>
 <script>
-	  $(document).ready(function(){
+$(document).ready(function(){
         $(".tab li").click(function(){
         $(".tab li").eq($(this).index()).addClass("cur").siblings().removeClass('cur');
-$(".box").hide().eq($(this).index()).show();
+	$(".box").hide().eq($(this).index()).show();
        //另一种方法: $("box").eq($(".tab li").index(this)).addClass("on").siblings().removeClass('on'); 
-
         });
-    });
+});
 </script>
 </html>
