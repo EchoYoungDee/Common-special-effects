@@ -28,7 +28,12 @@ $(document).ready(function(){
         $(".tab li").click(function(){
         $(".tab li").eq($(this).index()).addClass("cur").siblings().removeClass('cur');
 	$(".box").hide().eq($(this).index()).show();
-       //另一种方法: $("box").eq($(".tab li").index(this)).addClass("on").siblings().removeClass('on'); 
+        //另一种方法: $("box").eq($(".tab li").index(this)).addClass("on").siblings().removeClass('on'); 
+        });
+	//我的方法
+	$(this).addClass("to_m2ul1_cur");
+        $(".tab li").not(this).each(function(index, el) {
+            $(this).removeClass('cur');
         });
 });
 </script>
