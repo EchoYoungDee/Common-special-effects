@@ -64,25 +64,21 @@ $(document).ready(function(){
 $(".top").hover(
 //鼠标移上去的方法
 function(){
-$(".top ul").eq($(this).index()).show(500); /*.eq($(this).index()) 这句起到了遍历的作用,使其对应子下拉内容显示，改变 show() 为 slideDown() 等效果可以
-改变其出现效果*/
-},
-//鼠标移开的方法
-function(){
-$(".top ul").hide();
-})
-})
+// 【方法1 常驻显示】
+var im = $(".top").index($(this));
+$('.top ul').hide();
+$('.top ul').eq(im).show();
+
+// 【方法2 移开消失】
+// $(".top ul").eq($(this).index()).show(500); /*.eq($(this).index()) 这句起到了遍历的作用,使其对应子下拉内容显示，改变 show() 为 slideDown() 等效果可以
+// 改变其出现效果*/
+// },
+// //鼠标移开的方法
+// function(){
+// $(".top ul").hide();
+});
+
+
+});
 </script>
-<!-- 
-$("#id").hover(
-//鼠标移上去的方法
-  function () {
-    $("#菜单").show(500);
-  },
-//鼠标移开的方法
- function () {
-    $("#菜单").hide();
- }
-); 
--->
 </html>
