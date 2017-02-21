@@ -7,10 +7,6 @@
 >简易的轮播实现方法,重在理解轮播原理
 [点击查看](http://htmlpreview.github.io/?https://github.com/EchoYoungDee/Some-JQ-JS-Code/blob/master/JQ轮播.html)
 
-### 图片无缝滚动
->老旧的特效，有些网站还需要这样的效果，提供四种方向的特效方案,效果在 “Gundong” 文件夹内
-[点击查看](https://github.com/EchoYoungDee/Some-JQ-JS-Code/tree/master/Gundong)
-
 ### 下拉菜单
 >网页常用的鼠标事件后显示下拉子菜单栏目的效果
 [点击查看](http://htmlpreview.github.io/?https://github.com/EchoYoungDee/Some-JQ-JS-Code/blob/master/下拉菜单.html)
