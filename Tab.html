@@ -28,7 +28,7 @@ $(document).ready(function(){
         $(".tab li").click(function(){
         	$(".tab li").eq($(this).index()).addClass("cur").siblings().removeClass('cur');
 		$(".box").hide().eq($(this).index()).show();
-        	//另一种方法: $("box").eq($(".tab li").index(this)).addClass("on").siblings().removeClass('on'); 
+		//另一种方法: $("box").eq($(".tab li").index(this)).addClass("on").siblings().removeClass('on'); 
 		//我的方法
 		$(this).addClass("cur");
         	$(".tab li").not(this).each(function(index, el) {
